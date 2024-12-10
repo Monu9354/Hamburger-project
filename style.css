@@ -1,74 +1,223 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     scroll-behavior: smooth;
 
 }
-body{
-    margin:0;
-    font-family:"poppins" , sans-serif ;
-    background-color:#f6f0eb;
-}
-a {
-    color:inherit;
-    text-decoration-line:none;
-}
-img{
-    width:100%;
-}
-header{
-    background-color:#ffffff;
-}
-.navbar-container{
-    padding:0.6rem 2.5rem;
-    display:flex;
-    justify-content:space-between;
-    color: #492118;
-    font-weight:700;
-}
-.burger-logo{
-    width:44px;
-}
-.nav-content-container{
-   display:flex;
-   align-items:center;
-   font-size:1.1rem;
-}
-.nav-content-container a+a{
-   padding-left:1.2rem;
+
+body {
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    background-color: #f6f0eb;
 }
 
-main{
-    padding:2.5rem 2rem;
+a {
+    color: inherit;
+    text-decoration-line: none;
+    cursor: pointer;
 }
-.hero-section p{
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #ffffffd5;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(4px);
+}
+
+.navbar-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger-logo {
+    width: 44px;
+    margin: 10px;
+}
+
+.nav-content-container {
+    display: flex;
+    align-items: center;
+    color: #492118;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+}
+
+.menu-closer {
+    display: none;
+}
+
+.nav-content-container a+a {
+    padding-left: 1.2rem;
+}
+
+.hero-section {
+    max-width: 95%;
+    margin-inline: auto;
+    padding-top: 3rem;
     color: #492118;
     text-align: center;
     font-size: 24px;
 }
-.normal-section{
-    max-width:90%;
-    padding-top:4rem;
-    margin-inline:auto;
-}
-.normal-section h2{
-    text-align:center;
-    font-weight:700;
-        color:rgb(73, 33, 24);
-        font-size:3rem;
+
+.normal-section {
+    max-width: 90%;
+    padding-top: 3rem;
+    margin-inline: auto;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(73, 33, 24);
+    font-size: 2.5rem;
 }
 
-.go-to-top{
-   display:flex ;
-   justify-content: center;
-   align-items:center;
-    color:white;
-    background-color: #ff6f61;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    font-size:1.5rem
+.go-top-container {
+    position: relative;
+    cursor: pointer;
 }
-.made-with{
-    text-align:center;
-    margin-bottom:50px;
+
+.go-top {
+    position: absolute;
+    right: 10px;
+    bottom: -96px
+}
+
+.top-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(255, 111, 97, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+}
+
+.made-with {
+    text-align: center;
+    color: #858585;
+    margin: 28px 0;
+}
+
+.menu-icon-container span {
+    display: none;
+}
+
+
+
+@media (max-width:900px) {
+    .burger-logo {
+        width: 32px;
+    }
+
+    .nav-content-container {
+        font-size: 0.9rem;
+    }
+
+    .nav-content-container a+a {
+        padding-left: 1rem;
+    }
+
+    .hero-section {
+        font-size: 16px;
+    }
+
+    .normal-section {
+        padding-top: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        background-color: rgb(246, 240, 235, 0.7);
+
+    }
+
+
+
+    .navbar-container {
+        margin: 12px 12px;
+        overflow: hidden;
+    }
+
+    .burger-logo {
+        margin-top: 0;
+        width: 36px;
+    }
+
+    
+
+    .nav-content-container {
+        position: absolute;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255);
+        font-weight: 600;
+        font-size: 16px;
+        padding: 1rem;
+        
+    }
+    .show-menu{
+        visibility: hidden;
+    }
+    .nav-content-container a+a {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .menu-closer {
+        display: inline;
+        cursor: pointer;
+        position: relative;
+        right: -166px;
+        font-size: 28px;
+        top: -19px;
+        margin: 0;
+    }
+
+    .menu-icon-container {
+        position: relative;
+
+    }
+
+    .menu-icon {
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -113px;
+        right: -92px;
+    }
+
+    .menu-icon-container span {
+        position: absolute;
+        display: inline;
+        top: -1px;
+        right: 8px;
+        cursor: pointer;
+    }
+
+    .normal-section {
+        max-width: 95%;
+        padding-top: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .made-with {
+        font-size: 12px;
+        margin-top: 4rem;
+    }
+
+    .top-arrow {
+        font-size: 1rem;
+    }
 }
